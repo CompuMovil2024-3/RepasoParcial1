@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.btnShowDialog.setOnClickListener {
-            startActivity(Intent(this, TeAmoActivity::class.java))
+            startActivity(Intent(this, NumerosActivity::class.java))
         }
     }
 }

@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">SampleCMP</string>
     <string name="Dame_click">Dame click</string>
+    <string name="ingresa_los_n_meros">Ingresa los números</string>
 </resources>
