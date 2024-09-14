@@ -1,7 +1,7 @@
 # Repaso parcial 1 de computación móvil
 
 ## Temas
-- Layouts
+- Layouts ✅
 - Intents ✅
 - Toasts
 - Adapter
