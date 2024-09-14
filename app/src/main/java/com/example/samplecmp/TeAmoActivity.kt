@@ -12,10 +12,9 @@ class TeAmoActivity : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
-
+        super.onCreate(savedInstanceState)
         binding = ActivityTeAmoBinding.inflate(layoutInflater)
         setContentView(binding.root)
         
-        super.onCreate(savedInstanceState)
     }
 }
