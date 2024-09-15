@@ -22,5 +22,9 @@ class MainActivity : AppCompatActivity() {
         binding.crearCuenta.setOnClickListener{
             startActivity(Intent(this, RegisterActivity::class.java))
         }
+
+        binding.cargarUsuarios.setOnClickListener{
+            startActivity(Intent(this, ListaUsuariosActivity::class.java))
+        }
     }
 }

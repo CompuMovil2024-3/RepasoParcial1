@@ -23,13 +23,13 @@ class RegisterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+
+
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         binding.crearcuenta.setOnClickListener{
             crearUsuario()
-            startActivity(Intent(this, TeAmoActivity::class.java))
-
         }
 
         binding.yatengocuenta.setOnClickListener{
@@ -39,30 +39,11 @@ class RegisterActivity : AppCompatActivity() {
     }
 
     private fun crearUsuario() {
-        val intent = Intent(this, TeAmoActivity::class.java)
-        usuariosCargar= loadUsuarios()
+        val intent = Intent(this, ListaUsuariosActivity::class.java)
         intent.putExtra("usuarios", Gson().toJson(usuariosCargar))
         startActivity(intent)
     }
 
 
-    fun loadUsuarios(): MutableList<Usuario> {
-        val usuarios = mutableListOf<Usuario>()
-        val json_string = this.assets.open("paises.json").bufferedReader().use{
-            it.readText()
-        }
-        var json = JSONObject(json_string);
-        var usuariosArray = json.getJSONArray("usuarios");
-        for (i in 0..usuariosArray.length()-1) {
-            val jsonObject = usuariosArray.getJSONObject(i)
-            val nombre = jsonObject.getString("nombre")
-            val apellido = jsonObject.getString("apellido")
-            val correo = jsonObject.getString("correo")
-            val contrasena = jsonObject.getString("contrasena")
-            val telefono = jsonObject.getString("telefono")
-            val user = Usuario(nombre, apellido, correo, contrasena, telefono)
-            usuarios.add(user)
-        }
-        return usuarios
-    }
+
 }
