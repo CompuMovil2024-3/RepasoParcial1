@@ -1,4 +1,4 @@
-[
+{"usuarios": [
   {
     "nombre": "Juan",
     "apellido": "Pérez",
@@ -34,4 +34,4 @@
     "contrasena": "Andres@789",
     "telefono": "555-7890"
   }
-]
+]}
