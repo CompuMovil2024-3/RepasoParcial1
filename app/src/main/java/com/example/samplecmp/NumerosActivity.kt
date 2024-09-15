@@ -16,7 +16,7 @@ class NumerosActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.enviar.setOnClickListener{
-            val intent = Intent(this, TeAmoActivity::class.java)
+            val intent = Intent(this, DisplayActivity::class.java)
             var numero1 = binding.numero1.text.toString()
             var numero2 = binding.numero2.text.toString()
             var numero3= binding.numero3.text.toString()
