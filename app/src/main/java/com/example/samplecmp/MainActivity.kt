@@ -18,5 +18,9 @@ class MainActivity : AppCompatActivity() {
         binding.iniciarSesion.setOnClickListener {
             startActivity(Intent(this, NumerosActivity::class.java))
         }
+
+        binding.crearCuenta.setOnClickListener{
+            startActivity(Intent(this, RegisterActivity::class.java))
+        }
     }
 }

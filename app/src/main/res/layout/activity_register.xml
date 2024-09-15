@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <TextView
+        android:id="@+id/greeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="175dp"
+        android:layout_marginTop="94dp"
+        android:layout_marginEnd="178dp"
+        android:text="¡Que bueno contar contigo!"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="105dp"
+        android:ems="10"
+        android:hint="Nombre"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/greeting" />
+
+    <EditText
+        android:id="@+id/editTextText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="105dp"
+        android:ems="10"
+        android:hint="Apellido"
+        android:minHeight="48dp"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <EditText
+        android:id="@+id/contrasena"
+        android:minHeight="48dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="105dp"
+        android:ems="10"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email" />
+
+    <EditText
+        android:id="@+id/contrasena2"
+        android:minHeight="48dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="105dp"
+        android:ems="10"
+        android:hint="Verificar Contraseña"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contrasena" />
+
+    <EditText
+        android:id="@+id/email"
+        android:minHeight="48dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="105dp"
+        android:ems="10"
+        android:hint="Correo"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
+
+    <EditText
+        android:id="@+id/telefono"
+        android:minHeight="48dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="105dp"
+        android:ems="10"
+        android:hint="Teléfono"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contrasena2" />
+
+    <Button
+        android:id="@+id/crearcuenta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginEnd="160dp"
+        android:layout_marginBottom="117dp"
+        android:text="Crear Cuenta"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/yatengocuenta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="104dp"
+        android:layout_marginEnd="109dp"
+        android:layout_marginBottom="67dp"
+        android:text="Ya tengo cuenta!   Iniciar Sesión"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
