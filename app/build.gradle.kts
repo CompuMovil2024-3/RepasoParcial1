@@ -7,6 +7,7 @@ android {
     namespace = "com.example.samplecmp"
     compileSdk = 34
 
+
     defaultConfig {
         applicationId = "com.example.samplecmp"
         minSdk = 24

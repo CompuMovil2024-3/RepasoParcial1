@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.btnShowDialog.setOnClickListener {
+        binding.iniciarSesion.setOnClickListener {
             startActivity(Intent(this, NumerosActivity::class.java))
         }
     }

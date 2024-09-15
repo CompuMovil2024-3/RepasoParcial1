@@ -7,16 +7,96 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/btnShowDialog"
+
+    <TextView
+        android:id="@+id/bienvenida"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/Dame_click"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="141dp"
+        android:layout_marginTop="290dp"
+        android:layout_marginEnd="142dp"
+        android:text="Bienvenido a FIXER!!"
+        android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-/>
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/usuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="101dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/usuario"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bienvenida" />
+
+    <EditText
+        android:id="@+id/contrasena"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="101dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/contrase_a"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/usuario" />
+
+
+    <Button
+        android:id="@+id/iniciarSesion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="138dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="139dp"
+        android:text="@string/iniciar_sesi_n"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contrasena" />
+
+    <TextView
+        android:id="@+id/noCuentaTexto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="184dp"
+        android:text="¿No tienes cuenta?"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/crearCuenta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iniciarSesion"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/crearCuenta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="105dp"
+        android:layout_marginBottom="184dp"
+        android:text="Crear cuenta"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/noCuentaTexto"
+        app:layout_constraintTop_toBottomOf="@+id/iniciarSesion" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
