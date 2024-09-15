@@ -12,3 +12,4 @@
 - Lógica
 - Leer json
 - Taller 1
+- Localización

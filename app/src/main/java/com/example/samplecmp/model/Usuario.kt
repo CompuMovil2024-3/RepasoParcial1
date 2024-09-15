@@ -1,5 +1,6 @@
 package com.example.samplecmp.model
 
+
 class Usuario {
     var nombre: String = ""
     var apellido: String = ""
@@ -18,4 +19,6 @@ class Usuario {
     override fun toString(): String {
         return nombre
     }
+
+
 }
