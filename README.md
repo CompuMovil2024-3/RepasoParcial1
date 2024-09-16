@@ -3,13 +3,14 @@
 ## Temas
 - Layouts ✅
 - Intents ✅
-- Toasts
-- Adapter
+- Toasts ✅
+- Adapter ✅
 - Kotlin!!!!
 - Build features✅
 - manifests
 - Permisos
-- Lógica
-- Leer json
-- Taller 1
-- Localización
+- Lógica ✅
+- Leer json ✅
+- Escribir json ✅
+- Taller 1 ✅/2
+- Localización 
