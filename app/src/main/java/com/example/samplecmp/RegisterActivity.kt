@@ -2,6 +2,7 @@ package com.example.samplecmp
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.Environment
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.samplecmp.databinding.ActivityRegisterBinding
@@ -23,8 +24,8 @@ class RegisterActivity : AppCompatActivity() {
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Mover el archivo usuarios.json a almacenamiento interno si no existe
-        moveJsonFileToInternalStorage()
+        // Mover el archivo usuarios.json a almacenamiento externo si no existe
+        moveJsonFileToExternalStorage()
 
         // Configurar el botón de registro
         binding.crearcuenta.setOnClickListener {
@@ -61,8 +62,9 @@ class RegisterActivity : AppCompatActivity() {
         }
     }
 
-    private fun moveJsonFileToInternalStorage() {
-        val file = File(filesDir, "usuarios.json")
+    private fun moveJsonFileToExternalStorage() {
+        val externalStorageDir = getExternalFilesDir(null)
+        val file = File(externalStorageDir, "usuarios.json")
         if (!file.exists()) {
             assets.open("usuarios.json").use { inputStream ->
                 FileOutputStream(file).use { outputStream ->
@@ -73,7 +75,8 @@ class RegisterActivity : AppCompatActivity() {
     }
 
     private fun addUsuarioToJson(usuario: Usuario) {
-        val file = File(filesDir, "usuarios.json")
+        val externalStorageDir = getExternalFilesDir(null)
+        val file = File(externalStorageDir, "usuarios.json")
         val jsonString = file.bufferedReader().use { it.readText() }
         val jsonObject = JSONObject(jsonString)
         val usuariosJsonArray = jsonObject.getJSONArray("usuarios")

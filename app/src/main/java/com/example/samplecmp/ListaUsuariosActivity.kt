@@ -1,6 +1,7 @@
 package com.example.samplecmp
 
 import android.os.Bundle
+import android.os.Environment
 import android.util.Log
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
@@ -32,7 +33,8 @@ class ListaUsuariosActivity : AppCompatActivity() {
 
     private fun loadUsuarios() {
         try {
-            val file = File(filesDir, "usuarios.json")
+            val externalStorageDir = getExternalFilesDir(null)
+            val file = File(externalStorageDir, "usuarios.json")
             val jsonString = file.bufferedReader().use { it.readText() }
             val json = JSONObject(jsonString)
             val usuariosArray = json.getJSONArray("usuarios")
